@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Give me a message....</p>
+
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+// import java.util.Scanner;
+// public 
+class THE_ENCRYPTOR
+{
+    main(msg)
+    {
+        // Scanner scan=new Scanner(System.in);
+        // System.out.println("Enter the message to be encrypted");
+        // String msg=scan.nextLine();
+        let len=msg.length;
+        console.log(msg)
+        let ch=new Array(len);// char[len];
+        for(let i=0;i<len;i++)
+        {
+            ch[i]=msg.charAt(i);
+            //System.out.println(ch[i]);
+        }      
+        let binary=["000000","000001","000010","000011","000100","000101","000110","000111","001000","001001","001010","001011","001100","001101","001110","001111","010000","010001","010010","010011","010100","010101","010110","010111","011000","011001","011010","011011","011100","011101","011110","011111","100000","100001","100010","100011","100100","100101","100110","100111","101000","101001","101010","101011","101100","101101","101110","101111","110000","110001","110010","110011","110100","110101","110110","110111","111000"];
+        let code="";
+        for(let j=0;j<len;j++)
+        {
+            switch(ch[j])
+            {
+                case ' ':
+                    code+=binary[0];break;
+                case 'a':
+                    code+=binary[1];break;
+                case 'b':
+                    code+=binary[2];break;   
+                case 'c':
+                    code+=binary[3];break;
+                case 'd':
+                    code+=binary[4];break;    
+                case 'e':
+                    code+=binary[5];break;
+                case 'f':
+                    code+=binary[6];break;    
+                case 'g':
+                    code+=binary[7];break;
+                case 'h':
+                    code+=binary[8];break;
+                case 'i':
+                    code+=binary[9];break;
+                case 'j':
+                    code+=binary[10];break;   
+                case 'k':
+                    code+=binary[11];break;
+                case 'l':
+                    code+=binary[12];break;    
+                case 'm':
+                    code+=binary[13];break;
+                case 'n':
+                    code+=binary[14];break;   
+                case 'o':
+                    code+=binary[15];break;
+                case 'p':
+                    code+=binary[16];break;
+                case 'q':
+                    code+=binary[17];break;
+                case 'r':
+                    code+=binary[18];break;   
+                case 's':
+                    code+=binary[19];break;
+                case 't':
+                    code+=binary[20];break;    
+                case 'u':
+                    code+=binary[21];break;
+                case 'v':
+                    code+=binary[22];break;   
+                case 'w':
+                    code+=binary[23];break;
+                case 'x':
+                    code+=binary[24];break;
+                case 'y':
+                    code+=binary[25];break;
+                case 'z':
+                    code+=binary[26];break;   
+                case '.':
+                    code+=binary[27];break;
+                case ',':
+                    code+=binary[28];break;    
+                case 'A':
+                    code+=binary[29];break;
+                case 'B':
+                    code+=binary[30];break;   
+                case 'C':
+                    code+=binary[31];break;
+                case 'D':
+                    code+=binary[32];break;
+                case 'E':
+                    code+=binary[33];break;
+                case 'F':
+                    code+=binary[34];break;   
+                case 'G':
+                    code+=binary[35];break;
+                case 'H':
+                    code+=binary[36];break;
+                case 'I':
+                    code+=binary[37];break;
+                case 'J':
+                    code+=binary[38];break;   
+                case 'K':
+                    code+=binary[39];break;
+                case 'L':
+                    code+=binary[40];break;    
+                case 'M':
+                    code+=binary[41];break;
+                case 'N':
+                    code+=binary[42];break;   
+                case 'O':
+                    code+=binary[43];break;
+                case 'P':
+                    code+=binary[44];break;
+                case 'Q':
+                    code+=binary[45];break;
+                case 'R':
+                    code+=binary[46];break;   
+                case 'S':
+                    code+=binary[47];break;
+                case 'T':
+                    code+=binary[48];break;    
+                case 'U':
+                    code+=binary[49];break;
+                case 'V':
+                    code+=binary[50];break;   
+                case 'W':
+                    code+=binary[51];break;
+                case 'X':
+                    code+=binary[52];break;
+                case 'Y':
+                    code+=binary[53];break;
+                case 'Z':
+                    code+=binary[54];break; 
+                case '!':
+                    code+=binary[55];break;
+                case '?':
+                    code+=binary[56];break;
+            }
+            if(j%18!=0||j==0)
+                console.log(code);
+            else
+                console.log(code);
+        }
+        return code;
+    }
+}
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+    x = (new THE_ENCRYPTOR()).main(x);
+  document.getElementById("demo").innerHTML = "You wrote: " + x;
+}
+</script>
+
+</body>
+</html>
