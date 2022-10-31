@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter the code to be decrypted</p>
+
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+// import java.util.Scanner;
+// public 
+class THE_DECRYPTOR
+{
+    main(code)
+    {
+        // Scanner scan=new Scanner(System.in);
+        // System.out.println("Enter the code to be decrypted");
+        // String code=scan.nextLine();
+        let len=code.length;
+        let lel=len/6;
+        let ch=new Array(len);// char[len];
+        for(let i=0;i<len;i++)
+        {
+            ch[i]=code.charAt(i);
+            //System.out.println(ch[i]);
+        }      
+        let arr=new Array(lel);  //  String arr[]=new String[let];int t=0;
+		let t=0;
+        for(let h=0;h<lel;h++)
+        {
+            arr[h]="";
+        }
+        for(let k=0;k<len;)
+        {
+            arr[t]= ch.slice(k,k+6);k+=6;t++;  // arr[t]=new String (ch,k,6);k+=6;t++;
+        }
+		let fullmsg = ""
+        for(let j=0;j<lel;j++)
+        {
+            let msg=' ';
+            switch(arr[j].join(""))
+            {
+                case "000000":
+                    msg=' ';break;
+                case "000001":
+                    msg='a';break;
+                case "000010":
+                    msg='b';break;   
+                case "000011":
+                    msg='c';break;
+                case "000100":
+                    msg='d';break;    
+                case "000101":
+                    msg='e';break;
+                case "000110":
+                    msg='f';break;   
+                case "000111":
+                    msg='g';break;
+                case "001000":
+                    msg='h';break;
+                case "001001":
+                    msg='i';break;
+                case "001010":
+                    msg='j';break;   
+                case "001011":
+                    msg='k';break;
+                case "001100":
+                    msg='l';break;    
+                case "001101":
+                    msg='m';break;
+                case "001110":
+                    msg='n';break;   
+                case "001111":
+                    msg='o';break;
+                case "010000":
+                    msg='p';break;
+                case "010001":
+                    msg='q';break;
+                case "010010":
+                    msg='r';break;   
+                case "010011":
+                    msg='s';break;
+                case "010100":
+                    msg='t';break;    
+                case "010101":
+                    msg='u';break;
+                case "010110":
+                    msg='v';break;   
+                case "010111":
+                    msg='w';break;
+                case "011000":
+                    msg='x';break;
+                case "011001":
+                    msg='y';break;
+                case "011010":
+                    msg='z';break;   
+                case "011011":
+                    msg='.';break;
+                case "011100":
+                    msg=',';break;    
+                case "011101":
+                    msg='A';break;
+                case "011110":
+                    msg='B';break;   
+                case "011111":
+                    msg='C';break;
+                case "100000":
+                    msg='D';break;
+                case "100001":
+                    msg='E';break;
+                case "100010":
+                    msg='F';break;   
+                case "100011":
+                    msg='G';break;
+                case "100100":
+                    msg='H';break;
+                case "100101":
+                    msg='I';break;
+                case "100110":
+                    msg='J';break;   
+                case "100111":
+                    msg='K';break;
+                case "101000":
+                    msg='L';break;    
+                case "101001":
+                    msg='M';break;
+                case "101010":
+                    msg='N';break;   
+                case "101011":
+                    msg='O';break;
+                case "101100":
+                    msg='P';break;
+                case "101101":
+                    msg='Q';break;
+                case "101110":
+                    msg='R';break;   
+                case "101111":
+                    msg='S';break;
+                case "110000":
+                    msg='T';break;    
+                case "110001":
+                    msg='U';break;
+                case "110010":
+                    msg='V';break;   
+                case "110011":
+                    msg='W';break;
+               case "110100":
+                    msg='X';break;
+                case "110101":
+                    msg='Y';break;
+                case "110110":
+                    msg='Z';break;
+                case"110111":
+                    msg='!';break;
+                case "111000":
+                    msg='?';break;
+            }
+			fullmsg = fullmsg + msg;
+            console.log(msg);
+            // System.out.print(msg);
+        }
+		return fullmsg;
+    }
+}
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+    x = (new THE_DECRYPTOR()).main(x);
+  document.getElementById("demo").innerHTML = "You wrote: " + x;
+}
+</script>
+
+</body>
+</html>
